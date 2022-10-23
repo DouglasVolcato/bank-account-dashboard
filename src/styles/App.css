@@ -11,6 +11,7 @@
 }
 
 .Balance, .TotalMovimented, .LastMovimentations, .LastOperation, .AddMovimentation {
+  height: 31vh;
   border: solid 0.5vw green;
   width: 49vw;
   min-width: 200px;
