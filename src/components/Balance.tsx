@@ -1,3 +1,6 @@
+import { useAccount } from "../hooks/account";
+
 export function Balance() {
-  return <div className="Balance">Balance</div>;
+  const totalBalance = useAccount().getInformation().balance;
+  return <div className="Balance">Balance: {totalBalance}</div>;
 }

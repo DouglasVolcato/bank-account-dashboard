@@ -1,3 +1,8 @@
+import { useAccount } from "../hooks/account";
+
 export function TotalMovimented() {
-  return <div className="TotalMovimented">TotalMovimented</div>;
+  const totalMovimented = useAccount().getInformation().totalMovimnted;
+  return (
+    <div className="TotalMovimented">Total movimented: {totalMovimented}</div>
+  );
 }
