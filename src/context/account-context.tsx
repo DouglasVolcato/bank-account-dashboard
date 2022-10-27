@@ -1,13 +1,9 @@
 import { createContext, ReactNode, useState } from "react";
-
-interface Movimentation {
-  value: number;
-  description: string;
-}
+import { Movimentation } from "../protocols/movimentation-interface";
 
 interface BankAccount {
   balance: number;
-  totalMovimnted: number;
+  totalMovimented: number;
   movimentations: Movimentation[];
 }
 
@@ -26,7 +22,7 @@ const defaultValue = {
   withdraw: () => {},
   getInformation: () => ({
     balance: 0,
-    totalMovimnted: 0,
+    totalMovimented: 0,
     movimentations: [],
   }),
 };
@@ -35,15 +31,31 @@ export const AccountContext = createContext<ContextProps>(defaultValue);
 
 export function AccountProvider({ children }: AccountProviderProps) {
   const [bankAccount, setBankAccount] = useState<BankAccount>({
-    balance: 0,
-    totalMovimnted: 0,
-    movimentations: [],
+    balance: 1500,
+    totalMovimented: 2500,
+    movimentations: [
+      {
+        type: "Deposit",
+        value: 2000,
+        description: "Salary",
+      },
+      {
+        type: "Withdraw",
+        value: 300,
+        description: "Bill",
+      },
+      {
+        type: "Withdraw",
+        value: 200,
+        description: "Bill",
+      },
+    ],
   });
 
   function deposit(movimentation: Movimentation): void {
     setBankAccount({
       balance: bankAccount.balance + movimentation.value,
-      totalMovimnted: bankAccount.totalMovimnted + movimentation.value,
+      totalMovimented: bankAccount.totalMovimented + movimentation.value,
       movimentations: [...bankAccount.movimentations, movimentation],
     });
   }
@@ -51,7 +63,7 @@ export function AccountProvider({ children }: AccountProviderProps) {
   function withdraw(movimentation: Movimentation): void {
     setBankAccount({
       balance: bankAccount.balance - movimentation.value,
-      totalMovimnted: bankAccount.totalMovimnted + movimentation.value,
+      totalMovimented: bankAccount.totalMovimented + movimentation.value,
       movimentations: [...bankAccount.movimentations, movimentation],
     });
   }
