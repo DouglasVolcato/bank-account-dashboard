@@ -10,9 +10,9 @@
   padding: 0;
 }
 
-.Balance, .TotalMovimented, .LastMovimentations, .LastOperation, .AddMovimentation {
+.Balance, .Chart, .LastMovimentations, .LastOperation, .AddMovimentation {
   height: 31vh;
-  border: solid 0.5vw green;
+  border: solid 0.5vw rgb(129, 129, 129);
   width: 49vw;
   min-width: 200px;
   background-color: #242424;
@@ -23,7 +23,7 @@
 }
 
 :root {
-  background-color: #035009;
+  background-color: #032750;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -99,7 +99,15 @@ button:focus-visible {
 }
 
 @media(max-width: 400px){
-  .Balance, .TotalMovimented, .LastMovimentations, .LastOperation, .AddMovimentation {
+  .Balance, .Chart, .LastMovimentations, .LastOperation, .AddMovimentation {
     width: 99%;
   }
+}
+
+.greenCard{
+  background-color: rgb(1, 100, 1);
+}
+
+.redCard{
+  background-color: rgb(110, 0, 0);
 }

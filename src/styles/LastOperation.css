@@ -1,0 +1,20 @@
+.LastOperation{
+    display: flex;
+    flex-direction: column;
+}
+.LastOperation-title{
+    text-align: center;
+    font-size: 22px;
+}
+.LastOperation-card{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.LastOperation-label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.LastOperation-value{
+    font-size: 17px;
+}

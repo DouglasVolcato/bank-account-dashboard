@@ -1,0 +1,21 @@
+.Balance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Balance p{
+    display: flex;
+    justify-content: center;
+}
+
+.Balance-label{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.Balance-value{
+    font-size: 25px;
+    margin: 5px;
+}

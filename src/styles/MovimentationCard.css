@@ -1,0 +1,15 @@
+.MovimentationCard{
+    width: 100%;
+    border: solid 3px rgb(179, 177, 177);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.MovimentationCard-type_label, .MovimentationCard-value_label, .MovimentationCard-description_label{
+    font-weight: bold;
+    text-align: center;
+}
+
+.MovimentationCard-type_value, .MovimentationCard-description_value, .MovimentationCard-value_value{
+    text-align: center;
+}
