@@ -1,0 +1,18 @@
+.Chart{
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+}
+
+.Chart-bar{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.Chart-bar_positive{
+    margin-top:auto;
+    background-color: green;
+}
+
+.Chart-bar_negative{
+    background-color: red;
+}
