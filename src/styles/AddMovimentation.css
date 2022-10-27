@@ -1,0 +1,13 @@
+.AddMovimentation-form{
+    margin: auto;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.AddMovimentation-form div{
+    display: flex;
+    justify-content: left;
+}
