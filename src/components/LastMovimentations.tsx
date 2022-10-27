@@ -1,3 +1,14 @@
+import { useAccount } from "../hooks/account";
+import { MovimentationCard } from "./MovimentationCard";
+import "../styles/LastMovimentations.css"
+
 export function LastMovimentations() {
-  return <div className="LastMovimentations">LastMovimentations</div>;
+  const { movimentations } = useAccount().getInformation();
+  return (
+    <div className="LastMovimentations">
+      {movimentations.map((movimentation) => (
+        <MovimentationCard movimentation={movimentation} />
+      ))}
+    </div>
+  );
 }
