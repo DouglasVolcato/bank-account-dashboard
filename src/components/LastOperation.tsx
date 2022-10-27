@@ -3,7 +3,9 @@ import "../styles/LastOperation.css";
 
 export function LastOperation() {
   const { description, type, value } =
-    useAccount().getInformation().movimentations[0];
+    useAccount().getInformation().movimentations[
+      useAccount().getInformation().movimentations.length - 1
+    ];
 
   function cardColor() {
     return type.toUpperCase() === "DEPOSIT"
